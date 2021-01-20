@@ -16,6 +16,7 @@ export function mapFieldToTextField<T = any>({
 > {
   return {
     ...field,
+    onChange: (_, value) => form.setFieldValue(field.name, value),
     errorMessage: getErrorMessage({ form, field }),
   }
 }
